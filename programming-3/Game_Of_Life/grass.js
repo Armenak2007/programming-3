@@ -1,6 +1,6 @@
 let livingCreature  =require(".LivingCreature")
 
-moodule.exports = class  JUR extends livingCreature {
+module.exports = class  JUR extends livingCreature {
 
     constructor(x, y) {
         this.x = x;

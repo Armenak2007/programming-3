@@ -39,7 +39,7 @@ class gnpr  {
     mul() {
         this.multiply++;
         var emptyCells = this.chooseCell(0);
-        var newCell = random(emptyCells);
+        var newCell = emptyCell[Math.floor(Math.random() * emptyCell.length)];
 
         console.log(emptyCells);
         if (newCell && this.multiply >= 15) {
@@ -56,7 +56,7 @@ class gnpr  {
     move() {
         this.energy--
         var emptyCells = this.chooseCell(0)
-        var newCell = random(emptyCells);
+        var newCell = emptyCell[Math.floor(Math.random() * emptyCell.length)];
 
         if (newCell && this.energy >= 0) {
             console.log(newCell)
@@ -76,7 +76,7 @@ class gnpr  {
 
     eat() {
         var emptyCells = this.chooseCell(2)
-        var newCell = random(emptyCells);
+        var newCell = emptyCell[Math.floor(Math.random() * emptyCell.length)];
 
         if (newCell) {
             this.energy++

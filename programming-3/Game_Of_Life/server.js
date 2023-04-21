@@ -10,8 +10,8 @@ app.use(express.static("."));
 app.get('/', function (req, res) {
     res.redirect('index.html');
 });
-server.listen(3000, () => {
-    console.log('connected');
+server.listen(3000,function(){
+    console.log('cserver is run');
 });
 
 //10
@@ -93,7 +93,7 @@ function matrixGenerator(matrixSize, grassCount, grEatCount, predatorCount, jurC
 //այստեղ քո պատրաստի թվերով լցված զանգվածը ուղարկում ես կլիենտին:
 //սոքեթի emit մեթոդը թույլ է տալիս առաջին արգումենտով ստեղծել իվենթի անունը, 
 //2-րդ արգումենտով ուղղարկել տվյալը, այն ինչ ուզում ես ուղարկել
-
+matrix = matrixGenerator(20, 15, 20, 5, 4, 2)
     io.sockets.emit('send matrix', matrix)
     
 // հիմա գնա կլիենտի ֆայլ

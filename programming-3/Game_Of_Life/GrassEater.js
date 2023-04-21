@@ -1,4 +1,4 @@
-let livingCreature  =require(".LivingCreature")
+let livingCreature  =require("/.LivingCreature")
 
 
  class GrassEater {

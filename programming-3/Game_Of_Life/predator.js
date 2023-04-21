@@ -1,8 +1,8 @@
-let livingCreature  =require(".LivingCreature")
+let livingCreature  =require("./LivingCreature")
  
 
 
-class Predator {
+class Predator extends livingCreature{
     constructor(x, y) {
         this.x = x;
         this.y = y;
@@ -60,7 +60,7 @@ class Predator {
     move() {
         this.energy--
         var emptyCells = this.chooseCell(0)
-        var newCell = random(emptyCells);
+        var newCell = emptyCell[Math.floor(Math.random() * emptyCell.length)];
 
         if (newCell && this.energy >= 0) {
             console.log(newCell)
@@ -80,7 +80,7 @@ class Predator {
 
     eat() {
         var emptyCells = this.chooseCell(2)
-        var newCell = random(emptyCells);
+        var newCell = emptyCell[Math.floor(Math.random() * emptyCell.length)];
 
         if (newCell) {
             this.energy++
